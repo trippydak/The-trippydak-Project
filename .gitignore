@@ -1,0 +1,54 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies and build output
+node_modules/
+dist/
+build/
+.cache/
+.next/
+coverage/
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*~
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# Credentials and cryptographic material
+*.kdbx
+*.p12
+*.pfx
+*.key
+*.pem
+*.crt
+*.gpg
+*.asc
+
+# Sensitive business records
+Clients/
+Finance/
+Recovery-Codes/
+Credentials/
+Private/
+Customer-Photos/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Archives and large device files
+*.zip
+*.7z
+*.tar
+*.gz
+*.iso
+*.img
+*.bin
