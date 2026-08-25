@@ -1,54 +1,43 @@
-# Environment variables and secrets
-.env
-.env.*
-!.env.example
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# Dependencies and build output
-node_modules/
-dist/
-build/
-.cache/
-.next/
-coverage/
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
-# Editor files
-.vscode/
-.idea/
-*.swp
-*~
+# testing
+/coverage
 
-# Operating-system files
+# next.js
+/.next/
+/out/
+
+# misc
 .DS_Store
-Thumbs.db
-
-# Credentials and cryptographic material
-*.kdbx
-*.p12
-*.pfx
-*.key
 *.pem
-*.crt
-*.gpg
-*.asc
 
-# Sensitive business records
-Clients/
-Finance/
-Recovery-Codes/
-Credentials/
-Private/
-Customer-Photos/
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
 
-# Logs and temporary files
-*.log
-*.tmp
-*.temp
+# env files (can opt-in for committing if needed)
+.env*
 
-# Archives and large device files
-*.zip
-*.7z
-*.tar
-*.gz
-*.iso
-*.img
-*.bin
+# vercel
+.vercel
+
+# typescript
+next-env.d.ts
+/dist/
+/.wrangler/
+/.sites-runtime/
+/outputs/
+/work/
+/.openai/

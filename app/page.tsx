@@ -103,7 +103,7 @@ export default function Home() {
             <div className="coordinates">
               <span>41.5868° N</span>
               <span>93.6250° W</span>
-              <span>STATUS: BUILDING</span>
+              <span>STATUS: <ONLINE></ONLINE></span>
             </div>
           </div>
         </div>
