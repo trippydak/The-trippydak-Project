@@ -3,6 +3,9 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://trippydak.com"),
+  other: {
+    "codex-preview": "development",
+  },
   title: "trippydak — Tech Made Stranger",
   description:
     "The digital headquarters of trippydak: rooted devices, rescued hardware, visual experiments, and ideas outside the default setting.",

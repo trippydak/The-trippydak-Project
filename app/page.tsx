@@ -1,167 +1,204 @@
-const signals = ["ROOT", "REPAIR", "CREATE", "QUESTION", "SHARE"];
+import { SignalStage } from "@/components/SignalStage";
+import { SiteFooter } from "@/components/SiteFooter";
+import { SiteHeader } from "@/components/SiteHeader";
 
-const transmissions = [
+const disciplines = [
   {
     number: "01",
-    label: "root & rebuild",
-    title: "Every device has another life in it.",
-    body: "Bootloaders, firmware, rescued hardware, strange operating systems, and the useful knowledge hiding underneath the factory settings.",
-    color: "violet",
-    meta: "ANDROID / HARDWARE / OPEN SYSTEMS",
+    name: "Android",
+    copy: "Software troubleshooting, bootloader research, root consultation, and recovery work—with risk explained before anything changes.",
+    status: "DOCUMENTATION OPEN",
   },
   {
     number: "02",
-    label: "visual originals",
-    title: "Color loud enough to leave a mark.",
-    body: "Psychedelic identities, glitch-soaked graphics, digital artifacts, and experiments built to feel unmistakably trippydak.",
-    color: "orange",
-    meta: "ART / IDENTITY / EXPERIMENTS",
+    name: "Apple",
+    copy: "Practical diagnostics, part replacement, operating-system help, and careful documentation for the repairs that fit the bench.",
+    status: "CASE STUDIES NEXT",
   },
   {
     number: "03",
-    label: "field notes",
-    title: "No gatekeeping. Show the whole process.",
-    body: "Honest breakdowns from the bench: what worked, what failed, what finally fixed it, and how somebody else can do it better next time.",
-    color: "green",
-    meta: "GUIDES / DISCOVERIES / RECEIPTS",
+    name: "PC / Laptop",
+    copy: "Diagnostics, hardware upgrades, system installs, cleanup, data transfer, and the reasoning behind each decision.",
+    status: "ACCEPTING INQUIRIES",
   },
+  {
+    number: "04",
+    name: "Consoles + Misc.",
+    copy: "A flexible lane for consoles and everyday electronics—evaluated one device at a time, without pretending every fix is routine.",
+    status: "CASE BY CASE",
+  },
+];
+
+const services = [
+  "device diagnostics",
+  "laptop + desktop repair",
+  "screens + batteries",
+  "storage + RAM upgrades",
+  "operating-system installs",
+  "data backup + transfer",
+  "malware cleanup",
+  "Android troubleshooting",
 ];
 
 export default function Home() {
   return (
     <main>
-      <header className="site-header">
-        <a className="wordmark" href="#top" aria-label="trippydak home">
-          trippy<span>dak</span>
-        </a>
-        <nav aria-label="Main navigation">
-          <a href="#about">about</a>
-          <a href="#transmissions">transmissions</a>
-          <a href="#contact">contact</a>
-        </nav>
-        <a className="signal-button" href="#transmissions">
-          enter the signal <span aria-hidden="true">↘</span>
-        </a>
-      </header>
+      <SiteHeader />
 
       <section className="hero" id="top">
-        <div className="hero-noise" aria-hidden="true" />
         <div className="hero-copy">
-          <p className="eyebrow"><span /> independent frequency // online now</p>
+          <p className="eyebrow"><span /> Des Moines public workbench · online</p>
           <h1>
-            tech made <em>stranger.</em>
-            <br />
-            art made <strong>personal.</strong>
+            Real work.<br />
+            <em>Honest notes.</em><br />
+            Better tech.
           </h1>
           <p className="hero-intro">
-            Welcome to the digital headquarters of <b>trippydak</b>—a living
-            archive of rooted devices, rescued hardware, visual experiments,
-            and ideas that refuse the default setting.
+            I&apos;m Dakota J.—a local tech enthusiast turning a lifelong electronics
+            habit into useful repairs, documented experiments, and practical things
+            other people can learn from.
           </p>
           <div className="hero-actions">
-            <a className="primary-action" href="#transmissions">explore the work <span>↗</span></a>
-            <a className="text-action" href="#about">decode trippydak <span>↓</span></a>
+            <a className="primary-action" href="/projects">
+              Explore the projects <span aria-hidden="true">↗</span>
+            </a>
+            <a className="secondary-action" href="/schedule">
+              Schedule a job <span aria-hidden="true">→</span>
+            </a>
           </div>
+          <p className="hero-note">
+            Independent · AI-assisted research · human judgment · no corporate act
+          </p>
         </div>
 
-        <div className="signal-core" aria-label="Animated trippydak signal graphic">
-          <div className="orbit orbit-one"><i /></div>
-          <div className="orbit orbit-two"><i /></div>
-          <div className="orbit orbit-three"><i /></div>
-          <div className="core-mark" aria-hidden="true">
-            <span>t</span><span>d</span>
-          </div>
-          <p className="core-label">ORIGINAL FREQUENCY<br />DES MOINES // EARTH</p>
-        </div>
-
-        <div className="hero-index" aria-hidden="true">00—01</div>
+        <SignalStage />
       </section>
 
       <div className="signal-ticker" aria-label="trippydak principles">
         <div>
-          {[...signals, ...signals].map((signal, index) => (
-            <span key={`${signal}-${index}`}>{signal}<i>✦</i></span>
+          {["REPAIR", "RESTORE", "DOCUMENT", "LEARN", "SHARE", "REPAIR", "RESTORE", "DOCUMENT", "LEARN", "SHARE"].map((signal, index) => (
+            <span key={`${signal}-${index}`}>{signal}<i aria-hidden="true">✦</i></span>
           ))}
         </div>
       </div>
 
-      <section className="about-section" id="about">
-        <div className="section-tag"><span>01</span> / THE OPERATOR</div>
-        <div className="about-grid">
-          <h2>A curious mind with the factory seal <em>already broken.</em></h2>
-          <div className="about-copy">
+      <section className="section current-build">
+        <div className="section-intro">
+          <p className="section-tag"><span>01</span> / CURRENT SIGNAL</p>
+          <p className="status-chip"><i /> BUILDING IN PUBLIC</p>
+        </div>
+        <div className="current-grid">
+          <div>
+            <p className="overline">FEATURED PROJECT · WEB / DOCUMENTATION</p>
+            <h2>The website is the first case study.</h2>
+          </div>
+          <div className="body-copy">
             <p>
-              <b>trippydak</b> is a digital maker, relentless tinkerer, and
-              visual troublemaker working where everyday technology meets a
-              more colorful reality.
+              trippydak.com V2 is being rebuilt as the home for every repair story,
+              experiment, failure, and useful discovery that follows. The design,
+              decisions, and progress are part of the project—not hidden behind it.
             </p>
-            <p>
-              This is not a polished corporate portfolio. It is a public
-              workbench—built for experiments, honest discoveries, useful
-              detours, and original work with a pulse.
-            </p>
-            <div className="coordinates">
-              <span>41.5868° N</span>
-              <span>93.6250° W</span>
-              <span>STATUS: <ONLINE></ONLINE></span>
-            </div>
+            <a className="inline-link" href="/projects/trippydak-com-v2">
+              Read the build notes <span aria-hidden="true">↗</span>
+            </a>
           </div>
         </div>
       </section>
 
-      <section className="transmissions-section" id="transmissions">
-        <div className="section-heading">
-          <div className="section-tag light"><span>02</span> / TRANSMISSIONS</div>
-          <h2>What lives<br />on this frequency.</h2>
-          <p>Three lanes. No fixed destination.</p>
+      <section className="section project-section">
+        <div className="section-heading-row">
+          <div>
+            <p className="section-tag light"><span>02</span> / THE TRIPPYDAK PROJECT</p>
+            <h2>One workbench.<br />Several lanes.</h2>
+          </div>
+          <p>
+            Projects are organized by the device in front of me, then documented
+            with the problem, process, result, and what I would do differently.
+          </p>
         </div>
 
-        <div className="transmission-grid">
-          {transmissions.map((item) => (
-            <article className={`transmission-card ${item.color}`} key={item.number}>
-              <div className="card-top">
-                <span>{item.number}</span>
-                <span className="card-arrow" aria-hidden="true">↗</span>
-              </div>
-              <p className="card-label">{item.label}</p>
-              <h3>{item.title}</h3>
-              <p className="card-body">{item.body}</p>
-              <div className="card-meta">{item.meta}</div>
+        <div className="discipline-grid">
+          {disciplines.map((item) => (
+            <article className="discipline-card" key={item.number}>
+              <div className="card-index">{item.number}</div>
+              <h3>{item.name}</h3>
+              <p>{item.copy}</p>
+              <div className="card-status">{item.status}</div>
             </article>
           ))}
         </div>
+
+        <a className="primary-action dark-action" href="/projects">
+          Open the project index <span aria-hidden="true">↗</span>
+        </a>
       </section>
 
-      <section className="manifesto-section">
-        <p className="manifesto-kicker">THE OPERATING PRINCIPLE</p>
-        <blockquote>
-          “Open it. Question it.<br />Make it <em>yours.</em>”
-        </blockquote>
-        <div className="manifesto-stamp" aria-hidden="true">
-          <span>NO DEFAULT SETTINGS</span>
-          <b>✦</b>
-        </div>
-      </section>
-
-      <section className="contact-section" id="contact">
-        <div>
-          <p className="eyebrow dark"><span /> signal remains open</p>
-          <h2>Find me wherever<br /><em>@trippydak</em> appears.</h2>
-        </div>
-        <div className="contact-side">
+      <section className="section services-preview">
+        <div className="services-title">
+          <p className="section-tag"><span>03</span> / SERVICES</p>
+          <h2>Useful help.<br /><em>No mystery pricing.</em></h2>
           <p>
-            The archive is just switching on. New builds, field notes, and
-            original drops will surface here as the signal gets stronger.
+            Every device and repair is different. I&apos;ll look at what is needed,
+            explain the options, and quote the work before moving ahead.
           </p>
-          <a href="#top">return to the source <span>↑</span></a>
+          <div className="button-row">
+            <a className="primary-action" href="/schedule">
+              Start an inquiry <span aria-hidden="true">↗</span>
+            </a>
+            <a className="inline-link" href="/services">See all services</a>
+          </div>
+        </div>
+        <ul className="service-list">
+          {services.map((service, index) => (
+            <li key={service}><span>0{index + 1}</span>{service}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="section process-section">
+        <div className="section-heading-row compact">
+          <div>
+            <p className="section-tag light"><span>04</span> / THE PROCESS</p>
+            <h2>Straightforward<br />from first message.</h2>
+          </div>
+        </div>
+        <div className="process-grid">
+          <article>
+            <span>01</span>
+            <h3>Tell me what happened.</h3>
+            <p>Send the device details, symptoms, and the kind of help you need.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Meet, inspect, agree.</h3>
+            <p>We schedule an appointment, review the device, and agree on scope and cost.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Repair, explain, return.</h3>
+            <p>I do the approved work, share the result, collect payment, and arrange pickup.</p>
+          </article>
+        </div>
+        <p className="boundary-note">
+          <strong>Bench boundary:</strong> I reserve the right to decline work that is
+          unsafe, unsupported, beyond my current knowledge, or cannot be verified as
+          authorized by the device owner.
+        </p>
+      </section>
+
+      <section className="section contact-band">
+        <div>
+          <p className="eyebrow dark"><span /> signal open · replies within 24 hours</p>
+          <h2>Got a device,<br />idea, or question?</h2>
+        </div>
+        <div className="contact-links">
+          <a href="tel:+15155008353"><span>Call or text</span>515.500.8353 <b>↗</b></a>
+          <a href="mailto:dakotajensen@trippydak.com"><span>Email</span>dakotajensen@trippydak.com <b>↗</b></a>
+          <a href="/contact"><span>Full contact page</span>Open contact options <b>→</b></a>
         </div>
       </section>
 
-      <footer>
-        <a className="wordmark footer-mark" href="#top">trippy<span>dak</span></a>
-        <p>© 2026 TRIPPYDAK // ALL ORIGINAL FREQUENCIES</p>
-        <p>BUILT OUTSIDE THE DEFAULT</p>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }
