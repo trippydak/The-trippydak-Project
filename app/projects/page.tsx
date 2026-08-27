@@ -33,7 +33,7 @@ export default function ProjectsPage() {
       <section className="section featured-project">
         <div className="project-feature-card">
           <div className="project-feature-copy">
-            <p className="status-chip"><i /> ACTIVE BUILD</p>
+            <p className="status-chip"><i /> LAUNCH CANDIDATE</p>
             <p className="overline">WEB / BRAND / DOCUMENTATION · 2026</p>
             <h2>trippydak.com V2</h2>
             <p>
@@ -48,8 +48,8 @@ export default function ProjectsPage() {
           <div className="project-progress" aria-label="Project progress">
             <span>DISCOVERY <b>COMPLETE</b></span>
             <span>CONTENT MAP <b>COMPLETE</b></span>
-            <span>V2 BUILD <b>ACTIVE</b></span>
-            <span>OWNER REVIEW <b>NEXT</b></span>
+            <span>V2 BUILD <b>COMPLETE</b></span>
+            <span>FINAL REVIEW <b>ACTIVE</b></span>
           </div>
         </div>
       </section>
@@ -71,7 +71,7 @@ export default function ProjectsPage() {
               <span>{category.number}</span>
               <h3>{category.title}</h3>
               <p>{category.note}</p>
-              <small>FIRST CASE STUDY COMING SOON</small>
+              <small>DOCUMENTATION QUEUE OPEN</small>
             </article>
           ))}
         </div>
@@ -85,6 +85,7 @@ export default function ProjectsPage() {
           credentials, invoices, and other identifying records. Risky procedures get
           clear warnings. Failed attempts remain in the story when they teach something.
         </p>
+        <p><strong>Next documentation target:</strong> the trippydak package repository.</p>
       </section>
       <SiteFooter />
     </main>

@@ -17,7 +17,7 @@ export default function SchedulePage() {
         <h1>Tell me what the<br /><em>device is doing.</em></h1>
         <p>
           Give me the basics. I&apos;ll review the request, decide whether it fits my
-          current bench, and normally respond within 24 hours.
+          current bench, and normally respond within 48 hours.
         </p>
       </section>
 

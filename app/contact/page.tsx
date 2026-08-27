@@ -5,7 +5,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 
 export const metadata: Metadata = {
   title: "Contact — trippydak",
-  description: "Call, text, or email trippydak in Des Moines, Iowa.",
+  description: "Text or email trippydak in Des Moines, Iowa.",
 };
 
 export default function ContactPage() {
@@ -13,7 +13,7 @@ export default function ContactPage() {
     <main>
       <SiteHeader />
       <section className="page-hero contact-hero">
-        <p className="eyebrow"><span /> messages open 24/7 · replies within 24 hours</p>
+        <p className="eyebrow"><span /> inquiries welcome · replies normally within 48 hours</p>
         <h1>Say what&apos;s up.<br /><em>I keep it 100.</em></h1>
         <p>
           Repair question, project idea, collaboration, or something else—choose
@@ -24,8 +24,8 @@ export default function ContactPage() {
       <section className="section contact-page-grid">
         <div className="direct-contact">
           <p className="section-tag"><span>01</span> / DIRECT</p>
-          <a href="tel:+15155008353">
-            <small>WORK PHONE · CALL OR TEXT</small>
+          <a href="sms:+15155008353">
+            <small>WORK PHONE · TEXT ONLY</small>
             <strong>515.500.8353</strong>
             <span aria-hidden="true">↗</span>
           </a>
@@ -38,12 +38,12 @@ export default function ContactPage() {
             <p><span>AREA</span>Des Moines, Iowa</p>
             <p><span>APPOINTMENTS</span>Scheduled only</p>
             <p><span>TIME ZONE</span>Central Time</p>
-            <p><span>RESPONSE</span>Within 24 hours</p>
+            <p><span>RESPONSE</span>Normally within 48 hours</p>
           </div>
         </div>
         <div>
           <p className="section-tag"><span>02</span> / WRITE A MESSAGE</p>
-          <h2>Build the email<br />right here.</h2>
+          <h2>Send a message<br />right here.</h2>
           <ContactForm />
         </div>
       </section>

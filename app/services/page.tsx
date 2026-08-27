@@ -16,8 +16,7 @@ const offered = [
   "Data backup and transfer",
   "Malware cleanup",
   "Android software troubleshooting",
-  "Bootloader and root consultation",
-  "Firmware recovery — experimental",
+  "Bootloader, root, and firmware consultation",
   "Console and miscellaneous electronics",
 ];
 
@@ -95,7 +94,7 @@ export default function ServicesPage() {
       </section>
 
       <section className="section service-cta">
-        <p>Replies are normally sent within 24 hours.</p>
+        <p>Replies are normally sent within 48 hours.</p>
         <h2>Ready to explain<br />what happened?</h2>
         <a className="primary-action" href="/schedule">Open the schedule form <span>↗</span></a>
       </section>

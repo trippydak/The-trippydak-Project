@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 
 export const metadata: Metadata = {
   title: "About — trippydak",
-  description: "A draft introduction to Dakota J. and the values behind trippydak.",
+  description: "Meet Dakota J. and the purpose, history, and values behind trippydak.",
 };
 
 const values = [
@@ -24,21 +23,20 @@ export default function AboutPage() {
   return (
     <main>
       <SiteHeader />
-      <div className="draft-banner" role="status">
-        OWNER REVIEW DRAFT · THIS PAGE IS NOT APPROVED FOR PUBLICATION
-      </div>
       <section className="about-visual-section">
         <div className="about-art-frame">
-          <Image
+          {/* A plain img keeps this static local asset out of the hosted image-optimization path. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src="/trippydak-mark-v2.webp"
             alt="Abstract trippydak TD signal emblem in violet and acid green"
             width={1254}
             height={1254}
-            priority
+            loading="eager"
           />
         </div>
         <div>
-          <p className="eyebrow"><span /> operator file · draft 01</p>
+          <p className="eyebrow"><span /> operator file · personal signal</p>
           <h1>Curiosity with the<br /><em>factory seal broken.</em></h1>
         </div>
       </section>
@@ -51,8 +49,8 @@ export default function AboutPage() {
         <div className="body-copy large-copy">
           <p>
             trippydak is a real person building in public—not a giant repair chain or
-            a million-dollar corporation. I&apos;m a 27-year-old technology enthusiast
-            turning a lifelong electronics hobby into practical work, stronger skills,
+            a million-dollar corporation. I&apos;m a Des Moines technology enthusiast
+            turning a lifelong electronics habit into practical work, stronger skills,
             and documentation that might help the next curious person.
           </p>
           <p>
@@ -72,13 +70,41 @@ export default function AboutPage() {
       </section>
 
       <section className="section owner-note">
-        <p className="section-tag"><span>03</span> / OWNER NOTE NEEDED</p>
-        <h2>This is where Dakota&apos;s own words finish the story.</h2>
-        <p>
-          Before launch, replace this review note with a personal paragraph about
-          where the name came from, what started the electronics obsession, and what
-          kind of work trippydak should become next.
-        </p>
+        <p className="section-tag"><span>03</span> / WHY TRIPPYDAK</p>
+        <h2>A personal signal becoming professional work.</h2>
+        <div className="body-copy owner-note-copy">
+          <p>
+            trippydak began as a PSN username. It wasn&apos;t created in a boardroom or
+            designed around a business plan—it was simply a name that came to me while
+            choosing an online handle. Over time, it became the identity behind my
+            technical work and the standard I want that work to represent.
+          </p>
+          <p>
+            My interest in technology took off after I started rooting Android devices
+            and learning how operating systems, bootloaders, and the wider Android
+            ecosystem fit together. Completing increasingly technical projects for
+            myself and others turned that curiosity into practical skill and showed me
+            that the work could become more than a hobby.
+          </p>
+          <p>
+            The trippydak Project is a record of progress: learning deliberately,
+            solving real problems, documenting the process honestly, and refusing to
+            let outside assumptions place a ceiling on what I can build.
+          </p>
+          <p>
+            I currently work full-time in a job I prefer to keep private while building
+            trippydak on the side. My goal is to turn the work I do after hours into my
+            full-time work and grow trippydak into a recognized brand without placing a
+            ceiling on what it can become.
+          </p>
+          <p>
+            I want this work to serve paying customers and people who are finding their
+            own way into electronics outside a traditional path. Useful repair work,
+            open documentation, and visible progress can make technical knowledge feel
+            reachable. The project is still evolving, and each completed build adds to
+            the proof.
+          </p>
+        </div>
       </section>
       <SiteFooter />
     </main>

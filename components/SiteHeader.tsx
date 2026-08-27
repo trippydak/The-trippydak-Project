@@ -2,6 +2,7 @@ import Link from "next/link";
 
 const navigation = [
   { href: "/projects", label: "The trippydak Project" },
+  { href: "/services", label: "Services" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -33,7 +34,6 @@ export function SiteHeader() {
               {item.label}
             </a>
           ))}
-          <a href="/services">Services</a>
           <a href="/schedule">Schedule</a>
         </nav>
       </details>

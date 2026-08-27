@@ -30,7 +30,7 @@ export default function AccessibilityPage() {
           <p>
             If something is difficult to read, reach, operate, or understand, email
             <a href="mailto:dakotajensen@trippydak.com"> dakotajensen@trippydak.com</a>
-            or call/text <a href="tel:+15155008353">515.500.8353</a>. Include the page
+            or text <a href="sms:+15155008353">515.500.8353</a>. Include the page
             and what you were trying to do.
           </p>
         </section>

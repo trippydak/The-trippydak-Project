@@ -32,7 +32,7 @@ export function SiteFooter() {
 
       <div className="footer-meta">
         <p>© 2026 trippydak</p>
-        <p>Des Moines, Iowa · messages open 24/7</p>
+        <p>Des Moines, Iowa · appointments scheduled</p>
       </div>
     </footer>
   );

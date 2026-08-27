@@ -16,7 +16,7 @@ export function SignalStage() {
           </span>
         ))}
       </div>
-      <p className="stage-readout">SIGNAL 515 · LAB ONLINE · V2 IN PROGRESS</p>
+      <p className="stage-readout">SIGNAL 515 · LAB ONLINE · SYSTEM READY</p>
     </div>
   );
 }

@@ -6,7 +6,7 @@ const disciplines = [
   {
     number: "01",
     name: "Android",
-    copy: "Software troubleshooting, bootloader research, root consultation, and recovery work—with risk explained before anything changes.",
+    copy: "Software troubleshooting plus bootloader, root, and firmware consultation—with risk explained before anything changes.",
     status: "DOCUMENTATION OPEN",
   },
   {
@@ -85,7 +85,7 @@ export default function Home() {
       <section className="section current-build">
         <div className="section-intro">
           <p className="section-tag"><span>01</span> / CURRENT SIGNAL</p>
-          <p className="status-chip"><i /> BUILDING IN PUBLIC</p>
+          <p className="status-chip"><i /> V2 LAUNCH CANDIDATE</p>
         </div>
         <div className="current-grid">
           <div>
@@ -94,7 +94,7 @@ export default function Home() {
           </div>
           <div className="body-copy">
             <p>
-              trippydak.com V2 is being rebuilt as the home for every repair story,
+              trippydak.com V2 has been rebuilt as the home for every repair story,
               experiment, failure, and useful discovery that follows. The design,
               decisions, and progress are part of the project—not hidden behind it.
             </p>
@@ -188,11 +188,11 @@ export default function Home() {
 
       <section className="section contact-band">
         <div>
-          <p className="eyebrow dark"><span /> signal open · replies within 24 hours</p>
+          <p className="eyebrow dark"><span /> signal open · replies normally within 48 hours</p>
           <h2>Got a device,<br />idea, or question?</h2>
         </div>
         <div className="contact-links">
-          <a href="tel:+15155008353"><span>Call or text</span>515.500.8353 <b>↗</b></a>
+          <a href="sms:+15155008353"><span>Work phone · text only</span>515.500.8353 <b>↗</b></a>
           <a href="mailto:dakotajensen@trippydak.com"><span>Email</span>dakotajensen@trippydak.com <b>↗</b></a>
           <a href="/contact"><span>Full contact page</span>Open contact options <b>→</b></a>
         </div>

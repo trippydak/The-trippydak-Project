@@ -31,7 +31,7 @@ const terms = [
   },
   {
     title: "Warranty",
-    body: "Any workmanship warranty and its length will be stated on the approved estimate or receipt. Parts are subject to the supplier or manufacturer's warranty. Accidental damage, unrelated failures, software changes, and misuse are not covered.",
+    body: "Repair workmanship is covered for 30 days after the device is returned. If a problem during that period was caused by the completed repair work, trippydak will evaluate and correct that workmanship at no additional labor charge. Parts are subject to the supplier or manufacturer's warranty. Accidental damage, liquid exposure, misuse, unrelated failures, customer software changes, and new problems are not covered.",
   },
   {
     title: "Unrepairable or abandoned devices",
@@ -44,9 +44,9 @@ export default function RepairTermsPage() {
     <main>
       <SiteHeader />
       <section className="page-hero legal-hero terms-hero">
-        <p className="eyebrow"><span /> review before requesting service</p>
+        <p className="eyebrow"><span /> read before requesting service</p>
         <h1>Clear terms.<br /><em>No surprise promises.</em></h1>
-        <p>Working draft for owner review · last updated August 25, 2026.</p>
+        <p>Last updated August 27, 2026.</p>
       </section>
       <article className="legal-copy terms-list">
         <div className="legal-alert">
@@ -65,10 +65,6 @@ export default function RepairTermsPage() {
             </div>
           </section>
         ))}
-        <p className="legal-review-note">
-          These terms are a practical operating draft and should receive owner—and,
-          if desired, legal—review before the V2 site is published.
-        </p>
       </article>
       <SiteFooter />
     </main>

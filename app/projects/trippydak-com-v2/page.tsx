@@ -12,10 +12,10 @@ export default function WebsiteV2ProjectPage() {
     <main>
       <SiteHeader />
       <section className="page-hero detail-hero">
-        <p className="eyebrow"><span /> active project · web / documentation</p>
+        <p className="eyebrow"><span /> launch candidate · web / documentation</p>
         <h1>Building the<br /><em>public workbench.</em></h1>
         <div className="detail-meta">
-          <span>STATUS / V2 BUILD</span>
+          <span>STATUS / FINAL REVIEW</span>
           <span>STARTED / 2026</span>
           <span>LOCATION / DES MOINES</span>
         </div>
